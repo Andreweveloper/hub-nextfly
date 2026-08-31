@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+coverage/
+.env
+.env.local
+.env.*.local
+*.log
+.vscode/
+.idea/
+everything-claude-code/
+ui-ux-pro-max-skill/
