@@ -1,0 +1,105 @@
+/* Nextfly Torre - editorial dark token system */
+
+:root {
+  /* primitive surfaces */
+  --c-void: #080A0F;
+  --c-slate-1: #0E131B;
+  --c-slate-2: #141B25;
+  --c-slate-3: #1B2430;
+  --c-text: #F4F6FA;
+  --c-muted: #8994A4;
+  --c-quiet: #5C6878;
+  --c-line: rgba(210, 220, 235, .13);
+  --c-line-strong: rgba(210, 220, 235, .22);
+
+  /* functional accents */
+  --a-emerald: #36E09A;
+  --a-blue: #6C9BFF;
+  --a-pink: #F58FBE;
+  --a-amber: #E8B75A;
+  --a-red: #F16C7A;
+  --a-emerald-veil: rgba(54, 224, 154, .12);
+  --a-blue-veil: rgba(108, 155, 255, .13);
+  --a-pink-veil: rgba(245, 143, 190, .13);
+  --a-amber-veil: rgba(232, 183, 90, .13);
+  --a-red-veil: rgba(241, 108, 122, .13);
+  --gradient-emerald: linear-gradient(135deg, #36E09A 0%, #147C70 100%);
+  --gradient-blue: linear-gradient(135deg, #A8C2FF 0%, #5967F2 100%);
+  --gradient-pink: linear-gradient(135deg, #FFC0DD 0%, #B86AD7 100%);
+
+  /* compatibility aliases used by the existing view templates */
+  --carta: var(--c-void);
+  --placa: var(--c-slate-2);
+  --placa-2: var(--c-slate-3);
+  --baia: rgba(14, 19, 27, .86);
+  --tinta: var(--c-text);
+  --fraca: var(--c-muted);
+  --fraquissima: var(--c-quiet);
+  --linha: var(--c-line);
+  --linha-forte: var(--c-line-strong);
+  --magenta: var(--a-pink);
+  --magenta-veu: var(--a-pink-veil);
+  --sobre-magenta: #120B12;
+  --azul: var(--a-blue);
+  --azul-veu: var(--a-blue-veil);
+  --ativo: var(--a-emerald);
+  --ativo-veu: var(--a-emerald-veil);
+  --espera: var(--a-amber);
+  --espera-veu: var(--a-amber-veil);
+  --parado: #7B8798;
+  --parado-veu: rgba(123, 135, 152, .13);
+  --erro: var(--a-red);
+  --erro-veu: var(--a-red-veil);
+
+  /* elevation and glow */
+  --sombra-tira: 0 10px 26px -18px rgba(0, 0, 0, .86);
+  --sombra-alta: 0 22px 60px -34px rgba(0, 0, 0, .95);
+  --glow-blue: 0 0 32px rgba(108, 155, 255, .18);
+  --glow-emerald: 0 0 32px rgba(54, 224, 154, .16);
+  --glow-pink: 0 0 32px rgba(245, 143, 190, .16);
+
+  /* geometry */
+  --raio: 12px;
+  --raio-g: 20px;
+  --raio-xl: 24px;
+  --pill: 999px;
+
+  /* typography */
+  --display: "Satoshi", "Geist", "Inter", system-ui, sans-serif;
+  --corpo: "Satoshi", "Geist", "Inter", system-ui, sans-serif;
+  --dado: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+
+  /* rhythm */
+  --u: 4px;
+  --u2: 8px;
+  --u3: 12px;
+  --u4: 16px;
+  --u6: 24px;
+  --u8: 32px;
+  --u12: 48px;
+
+  --larg-torre: 248px;
+  --alt-faixa: 64px;
+
+  color-scheme: dark;
+}
+
+/* The theme control keeps its three states while remaining within the dark direction. */
+:root[data-tema="claro"] {
+  --c-void: #10141B;
+  --c-slate-1: #171D26;
+  --c-slate-2: #1D2530;
+  --c-slate-3: #25303D;
+  --c-line: rgba(229, 236, 247, .18);
+  --c-line-strong: rgba(229, 236, 247, .28);
+  --c-muted: #A7B2C1;
+  --c-quiet: #748195;
+  --carta: var(--c-void);
+  --placa: var(--c-slate-2);
+  --placa-2: var(--c-slate-3);
+  --baia: rgba(23, 29, 38, .9);
+}
+
+:root[data-setor="prospeccao"] { --magenta: var(--a-emerald); --magenta-veu: var(--a-emerald-veil); }
+:root[data-setor="agentes"] { --magenta: var(--a-blue); --magenta-veu: var(--a-blue-veil); --ativo: var(--a-blue); --ativo-veu: var(--a-blue-veil); }
+:root[data-setor="crm"] { --magenta: var(--a-pink); --magenta-veu: var(--a-pink-veil); }
